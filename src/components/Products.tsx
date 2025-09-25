@@ -6,24 +6,17 @@ const Products = () => {
   const productCategories = [
     {
       icon: Package,
-      title: "Packaging Solutions",
-      description: "Biodegradable containers, boxes, and protective packaging that decompose naturally without harming the environment.",
-      features: ["Food-safe containers", "Shipping boxes", "Protective inserts", "Custom molding"],
+      title: "Food Packaging Solutions",
+      description: "Premium biodegradable food containers and packaging designed specifically for QSR and food service operations.",
+      features: ["Take-out containers", "Food delivery boxes", "Portion containers", "Grease-resistant packaging"],
       color: "nature"
     },
     {
       icon: Utensils,
-      title: "Tableware & Disposables",
-      description: "Elegant, sturdy disposable plates, bowls, and cutlery perfect for events and everyday use.",
-      features: ["Disposable plates", "Eco-friendly cutlery", "Food containers", "Coffee cups"],
+      title: "QSR Tableware & Disposables",
+      description: "Durable, elegant disposable tableware perfect for quick service restaurants and food service establishments.",
+      features: ["Disposable plates & bowls", "Eco-friendly cutlery", "Coffee cups & lids", "Food trays"],
       color: "earth"
-    },
-    {
-      icon: Home,
-      title: "Home & Garden",
-      description: "Innovative products for sustainable living, from planters to building materials.",
-      features: ["Garden planters", "Mulch alternatives", "Building panels", "Insulation materials"],
-      color: "accent"
     }
   ];
 
@@ -37,13 +30,13 @@ const Products = () => {
             <span className="bg-gradient-nature bg-clip-text text-transparent"> Product Range</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From packaging to home goods, discover how bagasse transforms into premium, 
-            sustainable products for every industry.
+            Discover how bagasse transforms into premium, sustainable products specifically 
+            designed for QSR and food service operations.
           </p>
         </div>
 
         {/* Product Categories */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           {productCategories.map((category, index) => (
             <Card key={index} className="group hover:shadow-natural transition-all duration-300 border-none animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardHeader className="text-center pb-6">
