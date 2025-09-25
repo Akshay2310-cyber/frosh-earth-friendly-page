@@ -36,22 +36,29 @@ All colors MUST be HSL.
     --input: 36 28% 88%;
     --ring: 142 76% 36%;
 
-    /* Custom design tokens for Frosh */
-    --earth-brown: 32 45% 55%;
-    --bagasse-gold: 32 95% 68%;
-    --nature-green: 142 76% 36%;
-    --sustainable-green: 154 64% 42%;
-    --natural-cream: 36 39% 97%;
-    --warm-sand: 36 33% 85%;
+    /* Custom design tokens for Frosh - Enhanced color palette */
+    --earth-brown: 25 45% 45%;
+    --bagasse-gold: 45 95% 65%;
+    --nature-green: 142 70% 35%;
+    --sustainable-green: 154 65% 40%;
+    --forest-deep: 142 80% 25%;
+    --mint-fresh: 164 75% 55%;
+    --natural-cream: 42 35% 96%;
+    --warm-sand: 42 30% 88%;
+    --terracotta: 15 65% 60%;
+    --sage-light: 142 25% 85%;
     
-    /* Gradients */
+    /* Enhanced gradients */
     --gradient-earth: linear-gradient(135deg, hsl(var(--earth-brown)), hsl(var(--bagasse-gold)));
-    --gradient-nature: linear-gradient(135deg, hsl(var(--nature-green)), hsl(var(--sustainable-green)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--natural-cream)), hsl(var(--warm-sand)));
+    --gradient-nature: linear-gradient(135deg, hsl(var(--nature-green)), hsl(var(--mint-fresh)));
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest-deep)), hsl(var(--sustainable-green)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--natural-cream)), hsl(var(--sage-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--terracotta)), hsl(var(--bagasse-gold)));
     
-    /* Shadows */
-    --shadow-natural: 0 10px 30px -10px hsl(var(--nature-green) / 0.2);
-    --shadow-warm: 0 8px 25px -8px hsl(var(--earth-brown) / 0.15);
+    /* Enhanced shadows with more depth */
+    --shadow-natural: 0 12px 35px -12px hsl(var(--nature-green) / 0.25);
+    --shadow-warm: 0 10px 30px -10px hsl(var(--earth-brown) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--mint-fresh) / 0.15);
 
     --radius: 0.5rem;
 

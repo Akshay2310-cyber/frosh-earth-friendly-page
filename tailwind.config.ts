@@ -47,7 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Frosh custom colors
+        // Frosh enhanced custom colors
         earth: {
           brown: "hsl(var(--earth-brown))",
           gold: "hsl(var(--bagasse-gold))",
@@ -56,9 +56,19 @@ export default {
           green: "hsl(var(--nature-green))",
           sustainable: "hsl(var(--sustainable-green))",
         },
+        forest: {
+          deep: "hsl(var(--forest-deep))",
+        },
+        mint: {
+          fresh: "hsl(var(--mint-fresh))",
+        },
         natural: {
           cream: "hsl(var(--natural-cream))",
           sand: "hsl(var(--warm-sand))",
+        },
+        terracotta: "hsl(var(--terracotta))",
+        sage: {
+          light: "hsl(var(--sage-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -123,11 +133,14 @@ export default {
       backgroundImage: {
         'gradient-earth': 'var(--gradient-earth)',
         'gradient-nature': 'var(--gradient-nature)',
+        'gradient-forest': 'var(--gradient-forest)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-accent': 'var(--gradient-accent)',
       },
       boxShadow: {
         'natural': 'var(--shadow-natural)',
         'warm': 'var(--shadow-warm)',
+        'glow': 'var(--shadow-glow)',
       },
     },
   },

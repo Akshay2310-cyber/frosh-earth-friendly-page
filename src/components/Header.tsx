@@ -19,49 +19,50 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <svg 
-              width="120" 
-              height="32" 
-              viewBox="0 0 120 32" 
+              width="100" 
+              height="40" 
+              viewBox="0 0 100 40" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
               className="text-foreground"
             >
-              {/* Leaf element */}
-              <path 
-                d="M8 16C8 11 11 8 16 8C21 8 24 11 24 16C24 21 21 24 16 24C11 24 8 21 8 16Z" 
-                fill="hsl(var(--nature-green))"
-                className="opacity-90"
+              {/* Frosh text with integrated leaf in 'o' */}
+              <text 
+                x="2" 
+                y="28" 
+                className="font-bold" 
+                style={{ fontSize: '22px', fill: 'hsl(var(--nature-green))' }}
+              >
+                fr
+              </text>
+              
+              {/* Leaf-styled 'o' */}
+              <ellipse 
+                cx="35" 
+                cy="22" 
+                rx="8" 
+                ry="6" 
+                fill="hsl(var(--sustainable-green))"
+                transform="rotate(-15 35 22)"
               />
               <path 
-                d="M12 12L20 20M16 8V24" 
-                stroke="white" 
+                d="M35 16 L35 28" 
+                stroke="hsl(var(--nature-green))" 
                 strokeWidth="1.5" 
                 strokeLinecap="round"
               />
+              <path 
+                d="M30 20 L40 24" 
+                stroke="hsl(var(--nature-green))" 
+                strokeWidth="1" 
+                strokeLinecap="round"
+              />
               
-              {/* Frosh text */}
               <text 
-                x="32" 
-                y="20" 
-                className="font-bold text-lg fill-current" 
-                style={{ fontSize: '18px' }}
-              >
-                Fr
-              </text>
-              <text 
-                x="52" 
-                y="20" 
-                fill="hsl(var(--nature-green))" 
-                className="font-bold text-lg" 
-                style={{ fontSize: '18px' }}
-              >
-                o
-              </text>
-              <text 
-                x="62" 
-                y="20" 
-                className="font-bold text-lg fill-current" 
-                style={{ fontSize: '18px' }}
+                x="46" 
+                y="28" 
+                className="font-bold" 
+                style={{ fontSize: '22px', fill: 'hsl(var(--nature-green))' }}
               >
                 sh
               </text>
