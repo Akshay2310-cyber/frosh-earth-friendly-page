@@ -29,7 +29,7 @@ const Sustainability = () => {
       title: "Waste Diverted",
       stat: "10,000+",
       description: "Tons of agricultural waste diverted from landfills",
-      color: "text-accent"
+      color: "text-accent dark:text-primary"
     }
   ];
 
@@ -53,8 +53,8 @@ const Sustainability = () => {
           {impacts.map((impact, index) => (
             <Card key={index} className="border-none shadow-warm hover:shadow-natural transition-all duration-300 group animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <impact.icon className={`w-8 h-8 ${impact.color}`} />
+                <div className="w-16 h-16 bg-muted dark:bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <impact.icon className={`w-8 h-8 ${impact.color} dark:text-primary`} />
                 </div>
                 <div className={`text-4xl font-bold mb-2 ${impact.color}`}>{impact.stat}</div>
                 <h3 className="text-lg font-semibold text-foreground mb-3">{impact.title}</h3>
@@ -104,26 +104,26 @@ const Sustainability = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-hero rounded-3xl p-8 animate-scale-in">
+          <div className="bg-gradient-hero rounded-3xl p-8 animate-scale-in border border-border/50">
             <div className="text-center">
               <h4 className="text-2xl font-bold text-foreground mb-6">Circular Economy in Action</h4>
               <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                <div className="flex items-center justify-between p-4 bg-card/70 rounded-lg border border-border/50">
                   <span className="font-medium">Sugarcane Harvest</span>
                   <span className="text-2xl">🌾</span>
                 </div>
                 <div className="text-center text-2xl">↓</div>
-                <div className="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                <div className="flex items-center justify-between p-4 bg-card/70 rounded-lg border border-border/50">
                   <span className="font-medium">Juice Extraction</span>
                   <span className="text-2xl">🥤</span>
                 </div>
                 <div className="text-center text-2xl">↓</div>
-                <div className="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                <div className="flex items-center justify-between p-4 bg-card/70 rounded-lg border border-border/50">
                   <span className="font-medium">Bagasse Collection</span>
                   <span className="text-2xl">♻️</span>
                 </div>
                 <div className="text-center text-2xl">↓</div>
-                <div className="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                <div className="flex items-center justify-between p-4 bg-card/70 rounded-lg border border-border/50">
                   <span className="font-medium">Frosh Products</span>
                   <span className="text-2xl">📦</span>
                 </div>

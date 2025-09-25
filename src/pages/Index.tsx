@@ -26,18 +26,12 @@ const Index = () => {
       </main>
       
       {/* Footer */}
-      <footer className="bg-foreground text-primary-foreground py-12">
+      <footer className="py-12 bg-gradient-hero dark:bg-background text-foreground dark:text-foreground">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-8 h-8 bg-gradient-nature rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">F</span>
-            </div>
-            <span className="text-xl font-bold">Frosh</span>
-          </div>
-          <p className="text-muted mb-4 max-w-md mx-auto">
+          <p className="mb-4 max-w-md mx-auto text-foreground/80 dark:text-foreground/80">
             Transforming agricultural waste into sustainable products for a cleaner tomorrow.
           </p>
-          <p className="text-sm text-muted opacity-75">
+          <p className="text-sm text-foreground/70 dark:text-foreground/70">
             © 2024 Frosh. All rights reserved. | Sustainably made from bagasse.
           </p>
         </div>

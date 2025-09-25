@@ -57,7 +57,7 @@ const About = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-gradient-hero rounded-3xl p-12 text-center animate-scale-in">
+        <div className="bg-gradient-hero rounded-3xl p-12 text-center animate-scale-in border border-border/50">
           <h3 className="text-3xl font-bold text-foreground mb-6">Our Mission</h3>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             At Frosh, we believe in the power of innovation to solve environmental challenges. 

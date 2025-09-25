@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Leaf, Menu } from "lucide-react";
+import { Leaf, Menu, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+
+  const isDark = (resolvedTheme ?? theme) === 'dark';
 
   const navItems = [
     { href: "#about", label: "About" },
@@ -13,61 +17,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-gradient-hero dark:bg-background/80 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <svg 
-              width="100" 
-              height="40" 
-              viewBox="0 0 100 40" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-foreground"
-            >
-              {/* Frosh text with integrated leaf in 'o' */}
-              <text 
-                x="2" 
-                y="28" 
-                className="font-bold" 
-                style={{ fontSize: '22px', fill: 'hsl(var(--nature-green))' }}
-              >
-                fr
-              </text>
-              
-              {/* Leaf-styled 'o' */}
-              <ellipse 
-                cx="35" 
-                cy="22" 
-                rx="8" 
-                ry="6" 
-                fill="hsl(var(--sustainable-green))"
-                transform="rotate(-15 35 22)"
-              />
-              <path 
-                d="M35 16 L35 28" 
-                stroke="hsl(var(--nature-green))" 
-                strokeWidth="1.5" 
-                strokeLinecap="round"
-              />
-              <path 
-                d="M30 20 L40 24" 
-                stroke="hsl(var(--nature-green))" 
-                strokeWidth="1" 
-                strokeLinecap="round"
-              />
-              
-              <text 
-                x="46" 
-                y="28" 
-                className="font-bold" 
-                style={{ fontSize: '22px', fill: 'hsl(var(--nature-green))' }}
-              >
-                sh
-              </text>
-            </svg>
-          </div>
+          {/* Logo removed per request */}
+          <div className="flex items-center gap-3" />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -82,10 +36,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA + Theme Toggle */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="sustainable" size="sm">
-              Get Quote
+            <Button asChild variant="sustainable" size="sm">
+              <a href="#contact">Get Quote</a>
+            </Button>
+            <Button variant="outline" size="icon" aria-label="Toggle theme" onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
           </div>
 
@@ -112,8 +69,11 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              <Button variant="sustainable" size="sm" className="mt-4 self-start">
-                Get Quote
+              <Button asChild variant="sustainable" size="sm" className="mt-4 self-start">
+                <a href="#contact" onClick={() => setIsMenuOpen(false)}>Get Quote</a>
+              </Button>
+              <Button variant="outline" size="sm" className="self-start" onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+                {isDark ? 'Light Mode' : 'Dark Mode'}
               </Button>
             </nav>
           </div>

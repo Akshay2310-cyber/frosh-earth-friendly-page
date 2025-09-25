@@ -61,12 +61,11 @@ const Products = () => {
                   ))}
                 </div>
                 
-                <Button 
+                <Button asChild 
                   variant="sustainable" 
                   className="w-full group-hover:scale-105 transition-transform duration-300"
                 >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  <a href="#contact">Learn More<ArrowRight className="w-4 h-4" /></a>
                 </Button>
               </CardContent>
             </Card>
@@ -81,11 +80,11 @@ const Products = () => {
             Contact us for custom solutions and bulk pricing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="text-lg">
-              Request Samples
+            <Button asChild variant="secondary" size="lg" className="text-lg bg-white/15 text-white hover:bg-white hover:text-earth-brown">
+              <a href="#contact">Request Samples</a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg border-white text-white hover:bg-white hover:text-earth-brown">
-              Get Quote
+            <Button asChild variant="outline" size="lg" className="text-lg border-white/80 text-white bg-white/10 hover:bg-white hover:text-earth-brown">
+              <a href="#contact">Get Quote</a>
             </Button>
           </div>
         </div>

@@ -114,7 +114,7 @@ const Contact = () => {
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-scale-in">
-          <div className="bg-gradient-hero rounded-3xl p-12">
+          <div className="bg-gradient-hero rounded-3xl p-12 border border-border/50">
             <h3 className="text-3xl font-bold text-foreground mb-4">
               Join the Sustainability Revolution
             </h3>
@@ -123,11 +123,11 @@ const Contact = () => {
               you're investing in a cleaner, greener future for generations to come.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" className="text-lg">
-                Download Product Catalog
+              <Button asChild variant="hero" size="lg" className="text-lg">
+                <a href="#contact">Download Product Catalog</a>
               </Button>
-              <Button variant="sustainable" size="lg" className="text-lg">
-                Schedule Consultation
+              <Button asChild variant="sustainable" size="lg" className="text-lg">
+                <a href="#contact">Schedule Consultation</a>
               </Button>
             </div>
           </div>
