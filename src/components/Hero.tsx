@@ -1,17 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Leaf, Recycle } from "lucide-react";
 import heroImage from "@/assets/hero-bagasse.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
+  return <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Sustainable bagasse products from sugarcane waste" 
-          className="w-full h-full object-cover opacity-30"
-        />
+        <img src={heroImage} alt="Sustainable bagasse products from sugarcane waste" className="w-full h-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/40"></div>
       </div>
       
@@ -20,7 +14,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in-up">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-nature-green/10 border border-nature-green/20 rounded-full px-4 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-nature-green/10 border border-nature-green/20 rounded-full mb-6 px-[5px] py-0 mx-0 my-[12px]">
               <Leaf className="w-4 h-4 text-nature-green" />
               <span className="text-sm font-medium text-nature-green">100% Sustainable</span>
             </div>
@@ -69,16 +63,10 @@ const Hero = () => {
           
           {/* Visual Element */}
           <div className="hidden lg:flex justify-center animate-scale-in">
-            <div className="relative">
-              <div className="w-96 h-96 bg-gradient-nature rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute inset-8 bg-gradient-earth rounded-full opacity-30 animate-pulse" style={{ animationDelay: "1s" }}></div>
-              <div className="absolute inset-16 bg-earth-gold rounded-full opacity-40 animate-pulse" style={{ animationDelay: "2s" }}></div>
-            </div>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
